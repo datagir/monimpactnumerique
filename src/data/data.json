@@ -68,12 +68,56 @@
   {
     "id": 7,
     "label": {
-      "fr": "Haute Définition <i>(4K)</i>"
+      "fr": "Ultra Haute Définition <i>(4K)</i>"
     },
     "category": "streaming",
     "values": {
       "fixe": 96.3,
       "4g": 262
+    }
+  },
+  {
+    "id": 8,
+    "label": {
+      "fr": "Visioconférence <i>entre 2 emplacements</i>"
+    },
+    "category": "conference",
+    "values": {
+      "fixe": 76.8,
+      "4g": 181
+    }
+  },
+  {
+    "id": 9,
+    "label": {
+      "fr": "Visioconférence <i>entre 20 emplacements</i>"
+    },
+    "category": "conference",
+    "values": {
+      "fixe": 700,
+      "4g": 1750
+    }
+  },
+  {
+    "id": 10,
+    "label": {
+      "fr": "Audioconférence <i>entre 2 emplacements</i>"
+    },
+    "category": "conference",
+    "values": {
+      "fixe": 50.2,
+      "4g": 55.9
+    }
+  },
+  {
+    "id": 11,
+    "label": {
+      "fr": "Audioconférence <i>entre 20 emplacements</i>"
+    },
+    "category": "conference",
+    "values": {
+      "fixe": 459,
+      "4g": 516
     }
   }
 ]

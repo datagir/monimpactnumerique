@@ -19,7 +19,7 @@ export default function Results() {
     setLines(
       data
         .filter((data) => categories.includes(data.category))
-        .sort((a, b) => (a.value > b.value ? 1 : -1))
+        .sort((a, b) => (a.values['4g'] > b.values['4g'] ? 1 : -1))
     )
   }, [data, categories])
 
@@ -28,7 +28,7 @@ export default function Results() {
       <Flipper flipKey={lines.map((line) => line.id).join()}>
         {lines.map((line) => (
           <Flipped flipId={line.id} key={line.id}>
-            <Line line={line} max={lines[lines.length - 1].value} />
+            <Line line={line} max={lines[lines.length - 1].values['4g']} />
           </Flipped>
         ))}
       </Flipper>
