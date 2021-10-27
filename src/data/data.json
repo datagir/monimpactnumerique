@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "label": {
+      "fr": "1 destinataire"
+    },
+    "category": "email",
+    "values": {
+      "fixe": 7.56,
+      "4g": 7.56
+    }
+  },
+  {
+    "id": 2,
+    "label": {
+      "fr": "1 destinataire<i>, une pièce jointe</i>"
+    },
+    "category": "email",
+    "values": {
+      "fixe": 8.21,
+      "4g": 8.17
+    }
+  },
+  {
+    "id": 3,
+    "label": {
+      "fr": "5 destinataires"
+    },
+    "category": "email",
+    "values": {
+      "fixe": 27.2,
+      "4g": 25.4
+    }
+  },
+  {
+    "id": 4,
+    "label": {
+      "fr": "5 destinataires<i>, une pièce jointe</i>"
+    },
+    "category": "email",
+    "values": {
+      "fixe": 25.4,
+      "4g": 27.4
+    }
+  },
+  {
+    "id": 5,
+    "label": {
+      "fr": "Basse Définition <i>(720p)</i>"
+    },
+    "category": "streaming",
+    "values": {
+      "fixe": 80.8,
+      "4g": 97.4
+    }
+  },
+  {
+    "id": 6,
+    "label": {
+      "fr": "Haute Définition <i>(1080p)</i>"
+    },
+    "category": "streaming",
+    "values": {
+      "fixe": 86.5,
+      "4g": 158
+    }
+  },
+  {
+    "id": 7,
+    "label": {
+      "fr": "Haute Définition <i>(4K)</i>"
+    },
+    "category": "streaming",
+    "values": {
+      "fixe": 96.3,
+      "4g": 262
+    }
+  }
+]
