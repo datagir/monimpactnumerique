@@ -27,11 +27,12 @@ export default function Line(props) {
     <Wrapper {...props}>
       <Title>
         <Emoji>
-          {props.line.category === 'email'
-            ? '✉️'
-            : props.line.category === 'streaming'
-            ? '🎞'
-            : '🖥'}
+          {props.line.emoji ||
+            (props.line.category === 'email'
+              ? '✉️'
+              : props.line.category === 'streaming'
+              ? '🎞'
+              : '🖥')}
         </Emoji>{' '}
         <Label
           dangerouslySetInnerHTML={{
@@ -39,16 +40,26 @@ export default function Line(props) {
           }}
         />
       </Title>
-      <Chart
-        type='Wifi'
-        value={props.line.values['fixe']}
-        percent={props.line.values['fixe'] / props.max}
-      />
-      <Chart
-        type='4G'
-        value={props.line.values['4g']}
-        percent={props.line.values['4g'] / props.max}
-      />
+      {props.line.values['fixe'] && (
+        <Chart
+          type='Wifi'
+          value={props.line.values['fixe']}
+          percent={props.line.values['fixe'] / props.max}
+        />
+      )}
+      {props.line.values['4g'] && (
+        <Chart
+          type='4G'
+          value={props.line.values['4g']}
+          percent={props.line.values['4g'] / props.max}
+        />
+      )}
+      {props.line.values['total'] && (
+        <Chart
+          value={props.line.values['total']}
+          percent={props.line.values['total'] / props.max}
+        />
+      )}
     </Wrapper>
   )
 }

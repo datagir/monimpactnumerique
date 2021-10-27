@@ -6,7 +6,7 @@ import Category from './categories/Category'
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 `
 export default function Categories() {
   return (

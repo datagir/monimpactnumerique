@@ -12,23 +12,37 @@ const Wrapper = styled.div`
   margin-bottom: 2rem;
 `
 export default function Results() {
-  const { data, categories } = useContext(SearchContext)
+  const { data, categories, comparaisons } = useContext(SearchContext)
   const [lines, setLines] = useState([])
 
   useEffect(() => {
     setLines(
       data
-        .filter((data) => categories.includes(data.category))
-        .sort((a, b) => (a.values['4g'] > b.values['4g'] ? 1 : -1))
+        .filter(
+          (data) =>
+            categories.includes(data.category) || comparaisons.includes(data.id)
+        )
+        .sort((a, b) =>
+          (a.values['4g'] || a.values['total']) >
+          (b.values['4g'] || b.values['total'])
+            ? 1
+            : -1
+        )
     )
-  }, [data, categories])
+  }, [data, categories, comparaisons])
 
   return (
     <Wrapper>
       <Flipper flipKey={lines.map((line) => line.id).join()}>
         {lines.map((line) => (
           <Flipped flipId={line.id} key={line.id}>
-            <Line line={line} max={lines[lines.length - 1].values['4g']} />
+            <Line
+              line={line}
+              max={
+                lines[lines.length - 1].values['4g'] ||
+                lines[lines.length - 1].values['total']
+              }
+            />
           </Flipped>
         ))}
       </Flipper>

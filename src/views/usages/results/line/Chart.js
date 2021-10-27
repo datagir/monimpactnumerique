@@ -85,16 +85,18 @@ export default function Chart(props) {
   const mounted = useMounted()
 
   return (
-    <Wrapper light={props.type === 'Wifi'}>
+    <Wrapper light={props.type === 'Wifi'} dark={!props.type}>
       <Bar mounted={mounted} percent={props.percent}>
-        {props.percent > 0.15 && <Type>{props.type}</Type>}
+        {props.percent > 0.15 && props.type && <Type>{props.type}</Type>}
         <Value inside={props.percent > 0.9}>
           <Number>{props.value}</Number>
           <Unit onClick={() => setCO2E(true)}>
             gCO
             <sub>2</sub>e
           </Unit>
-          {props.percent <= 0.15 && <SmallType>({props.type})</SmallType>}
+          {props.percent <= 0.15 && props.type && (
+            <SmallType> ({props.type})</SmallType>
+          )}
         </Value>
       </Bar>
     </Wrapper>
