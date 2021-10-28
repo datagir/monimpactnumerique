@@ -11,7 +11,7 @@ const Wrapper = styled.label`
   right: 0.5rem;
   display: flex;
 
-  ${(props) => props.theme.mq.medium} {
+  ${(props) => props.theme.mq.average} {
     position: relative;
     left: 0;
     right: 0;

@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   border-radius: 0.875rem;
   transition: border 200ms ease-out, background-color 300ms ease-out;
 
-  ${(props) => props.theme.mq.small} {
+  ${(props) => props.theme.mq.medium} {
     height: 1.5rem;
     width: 1.5rem;
   }
@@ -23,7 +23,7 @@ const Check = styled.svg`
   width: auto;
   height: 1.2rem;
 
-  ${(props) => props.theme.mq.small} {
+  ${(props) => props.theme.mq.medium} {
     height: 1rem;
   }
 

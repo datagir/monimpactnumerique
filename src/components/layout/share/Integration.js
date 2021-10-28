@@ -12,7 +12,7 @@ const Wrapper = styled.button`
   border-radius: 50%;
   cursor: pointer;
 
-  ${(props) => props.theme.mq.small} {
+  ${(props) => props.theme.mq.medium} {
     width: 2.5rem;
     height: 2.5rem;
   }
@@ -20,7 +20,7 @@ const Wrapper = styled.button`
 const Svg = styled.svg`
   width: 2.2rem !important;
 
-  ${(props) => props.theme.mq.small} {
+  ${(props) => props.theme.mq.medium} {
     width: 1.7rem;
   }
   path {

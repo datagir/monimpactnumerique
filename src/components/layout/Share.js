@@ -23,7 +23,7 @@ const ShareButtons = styled.div`
     width: 3.5rem;
     height: auto;
 
-    ${(props) => props.theme.mq.small} {
+    ${(props) => props.theme.mq.medium} {
       width: 2.5rem;
     }
 

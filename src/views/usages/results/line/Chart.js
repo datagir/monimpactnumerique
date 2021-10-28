@@ -9,20 +9,26 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
-  opacity: ${(props) => (props.light ? 0.73 : 1)};
 `
 const Bar = styled.div`
   position: relative;
   width: ${(props) => (props.mounted ? props.percent * 100 : 0)}%;
+  min-width: 0.25rem;
   height: 1.75rem;
   transform-origin: left;
-  background-color: ${(props) => props.theme.colors.second};
-  border-radius: 1rem;
+  background-color: ${(props) =>
+    props.theme.colors[
+      !props.type
+        ? 'secondDark'
+        : props.type === 'Wifi'
+        ? 'secondLessLight'
+        : 'second'
+    ]};
+  border-radius: 0.875rem;
   cursor: pointer;
   transition: width 400ms ease-in-out;
 
   ${(props) => props.theme.mq.small} {
-    width: calc(${(props) => props.percent * 70}vw + 1rem);
     height: 1.75rem;
     border-radius: 0.875rem;
   }
@@ -49,7 +55,7 @@ const Value = styled.div`
   color: ${(props) => props.theme.colors.second};
   transition: color 200ms ease-out;
 
-  ${(props) => props.theme.mq.small} {
+  ${(props) => props.theme.mq.medium} {
     left: ${(props) => (props.inside ? 'auto' : '100%')};
     right: ${(props) => (props.inside ? '1rem' : 'auto')};
     color: ${(props) =>
@@ -60,10 +66,6 @@ const Number = styled.span`
   margin-right: 0.3rem;
   font-size: 1.25rem;
   font-weight: 700;
-
-  ${(props) => props.theme.mq.small} {
-    font-size: 1rem;
-  }
 `
 const Unit = styled.span`
   cursor: pointer;
@@ -85,8 +87,8 @@ export default function Chart(props) {
   const mounted = useMounted()
 
   return (
-    <Wrapper light={props.type === 'Wifi'} dark={!props.type}>
-      <Bar mounted={mounted} percent={props.percent}>
+    <Wrapper>
+      <Bar mounted={mounted} percent={props.percent} type={props.type}>
         {props.percent > 0.15 && props.type && <Type>{props.type}</Type>}
         <Value inside={props.percent > 0.9}>
           <Number>{props.value}</Number>

@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   justify-content: space-around;
   margin-bottom: ${(props) => (props.iframe ? 1 : 2)}rem;
 
-  ${(props) => props.theme.mq.medium} {
+  ${(props) => props.theme.mq.average} {
     display: flex;
   }
 `

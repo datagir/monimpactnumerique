@@ -38,7 +38,7 @@ const Section = styled.div`
 `
 const MobileSection = styled(Section)`
   display: none;
-  ${(props) => props.theme.mq.medium} {
+  ${(props) => props.theme.mq.average} {
     display: flex;
   }
 `

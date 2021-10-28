@@ -16,7 +16,7 @@ const Button = styled.button`
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  width: 11rem;
+  width: 11.5rem;
   height: 9rem;
   margin: 0 auto;
   padding: 0.75rem 0.25rem;
@@ -28,6 +28,11 @@ const Button = styled.button`
   opacity: ${(props) => (props.disabled ? 0.3 : 1)};
   cursor: ${(props) => (props.disabled ? 'normal' : 'pointer')};
   transition: all 200ms ease-out;
+
+  ${(props) => props.theme.mq.small} {
+    width: calc(33.3333vw - 1rem);
+    height: calc(33.3333vw - 1rem);
+  }
 `
 const StyledEmoji = styled(Emoji)`
   font-size: 2rem;

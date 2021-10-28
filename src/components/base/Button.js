@@ -39,7 +39,7 @@ const Wrapper = styled(MagicLink)`
     outline: none;
   }
 
-  ${(props) => props.theme.mq.small} {
+  ${(props) => props.theme.mq.medium} {
     font-size: 1em;
   }
 `

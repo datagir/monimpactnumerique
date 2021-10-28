@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   width: ${(props) => (props.open ? '30rem' : 0)};
   transition: width 400ms ease-out;
 
-  ${(props) => props.theme.mq.medium} {
+  ${(props) => props.theme.mq.average} {
     display: ${(props) => (props.open && props.small ? 'block' : 'none')};
     width: auto;
     border-left: none;
@@ -34,7 +34,7 @@ const Content = styled.div`
   transform: translateX(${(props) => (props.open ? 0 : '100%')});
   transition: transform 400ms ease-out;
 
-  ${(props) => props.theme.mq.medium} {
+  ${(props) => props.theme.mq.average} {
     position: relative;
     width: auto;
     height: auto;

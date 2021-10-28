@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  ${(props) => props.theme.mq.medium} {
+  ${(props) => props.theme.mq.average} {
     flex-direction: column-reverse;
   }
 `
@@ -27,11 +27,11 @@ const FullScreen = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  width: 47rem;
+  width: 39rem;
   max-width: 100%;
   min-height: ${(props) => (props.iframe ? 'none' : '100vh')};
   margin: 0 auto;
-  padding: 0 5rem 5rem;
+  padding: 0 0.75rem 5rem;
 
   ${(props) => props.theme.mq.small}  {
     padding: 0 0.75rem 5rem;

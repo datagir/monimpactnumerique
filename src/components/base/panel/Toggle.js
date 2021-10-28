@@ -20,7 +20,7 @@ const Wrapper = styled.button`
     outline: none;
   }
 
-  ${(props) => props.theme.mq.medium} {
+  ${(props) => props.theme.mq.average} {
     display: none;
   }
 `
