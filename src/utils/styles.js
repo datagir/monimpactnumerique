@@ -35,8 +35,10 @@ export const themes = {
     name: 'Sombre',
     colors: {
       main: '#F6BFC3',
-      second: '#E5EDF5',
+      second: '#CFE0F2',
       secondLight: '#383838',
+      secondLessLight: '#E5EDF5',
+      secondDark: '#B0CDE8',
       background: '#1e1e1e',
       footer: '#383838',
       text: '#ffffff',
@@ -46,8 +48,9 @@ export const themes = {
       title: '"Marianne", sans-serif',
     },
     mq: {
-      small: `@media screen and (max-width: ${46}em)`,
-      medium: `@media screen and (max-width: ${75}em)`,
+      small: `@media screen and (max-width: ${38}em)`,
+      medium: `@media screen and (max-width: ${48}em)`,
+      average: `@media screen and (max-width: ${75}em)`,
       mediumLandscape: `@media screen and (orientation: landscape) and (max-width: ${62}px)`,
       mediumPortrait: `@media screen and (orientation: portrait) and (max-width: ${62}px)`,
       large: `@media screen and (min-width: ${92}em)`,

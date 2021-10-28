@@ -22,6 +22,10 @@ const Svg = styled.svg`
   path {
     fill: ${(props) => props.theme.colors.main};
   }
+
+  ${(props) => props.theme.mq.small} {
+    height: 3rem;
+  }
 `
 const Circle = styled.circle`
   fill: ${(props) => props.theme.colors.main};

@@ -52,14 +52,29 @@ const Value = styled.div`
   align-items: baseline;
   padding-left: ${(props) => (props.noBar ? 0 : 0.5)}rem;
   line-height: 0.7;
-  color: ${(props) => props.theme.colors.second};
+  color: ${(props) =>
+    props.theme.colors[
+      !props.type
+        ? 'secondDark'
+        : props.type === 'Wifi'
+        ? 'secondLessLight'
+        : 'second'
+    ]};
   transition: color 200ms ease-out;
 
   ${(props) => props.theme.mq.medium} {
     left: ${(props) => (props.inside ? 'auto' : '100%')};
     right: ${(props) => (props.inside ? '1rem' : 'auto')};
     color: ${(props) =>
-      props.theme.colors[props.inside ? 'background' : 'second']};
+      props.theme.colors[
+        props.inside
+          ? 'background'
+          : !props.type
+          ? 'secondDark'
+          : props.type === 'Wifi'
+          ? 'secondLessLight'
+          : 'second'
+      ]};
   }
 `
 const Number = styled.span`
@@ -90,7 +105,7 @@ export default function Chart(props) {
     <Wrapper>
       <Bar mounted={mounted} percent={props.percent} type={props.type}>
         {props.percent > 0.15 && props.type && <Type>{props.type}</Type>}
-        <Value inside={props.percent > 0.9}>
+        <Value inside={props.percent > 0.9} type={props.type}>
           <Number>{props.value}</Number>
           <Unit onClick={() => setCO2E(true)}>
             gCO
