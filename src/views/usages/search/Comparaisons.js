@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
   ${(props) => props.theme.mq.small} {
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: ${(props) => (props.open ? 1 : 0)}rem;
   }
 `
 const Button = styled.button`
@@ -66,7 +66,7 @@ export default function Comparaisons() {
   }, [comparaisons])
 
   return (
-    <Wrapper>
+    <Wrapper open={open}>
       <Button onClick={() => setOpen((prevOpen) => !prevOpen)} open={open}>
         Afficher des comparaisons
       </Button>

@@ -9,7 +9,7 @@ const Wrapper = styled.svg`
 
   ${(props) => props.theme.mq.small} {
     height: 3rem;
-    margin: 0.75rem 0;
+    margin-left: 0;
   }
 `
 export default function Ademe() {

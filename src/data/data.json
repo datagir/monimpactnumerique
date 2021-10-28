@@ -145,7 +145,7 @@
   {
     "id": 14,
     "label": {
-      "fr": "Un smartphone <i>(fabrication et distribution)</i>"
+      "fr": "Un smartphone <i>(fabrication&nbsp;et&nbsp;distribution)</i>"
     },
     "category": "comparaison",
     "emoji": "📱",
@@ -156,7 +156,7 @@
   {
     "id": 15,
     "label": {
-      "fr": "Un laptop <i>(fabrication et distribution)</i>"
+      "fr": "Un laptop <i>(fabrication&nbsp;et&nbsp;distribution)</i>"
     },
     "category": "comparaison",
     "emoji": "💻",
@@ -167,7 +167,7 @@
   {
     "id": 16,
     "label": {
-      "fr": "Une télévision <i>(fabrication et distribution)</i>"
+      "fr": "Une télévision <i>(fabrication&nbsp;et&nbsp;distribution)</i>"
     },
     "category": "comparaison",
     "emoji": "📺",
