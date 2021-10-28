@@ -9,8 +9,9 @@ import StyleProvider from 'components/providers/StyleProvider'
 import ModalProvider from 'components/providers/ModalProvider'
 import UXProvider from 'components/providers/UXProvider'
 import SearchProvider from 'components/providers/SearchProvider'
-
 import CO2EModal from 'components/modals/CO2EModal'
+import InstallInstructionsModal from 'components/modals/InstallInstructionsModal'
+import PerimetreModal from 'components/modals/PerimetreModal'
 import Web from 'components/layout/Web'
 import Usages from 'views/Usages'
 
@@ -34,6 +35,8 @@ function App() {
                     </Switch>
                   </Web>
                   <CO2EModal />
+                  <InstallInstructionsModal />
+                  <PerimetreModal />
                 </SearchProvider>
               </ModalProvider>
             </UXProvider>

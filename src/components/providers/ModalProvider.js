@@ -4,6 +4,7 @@ import ModalContext from 'utils/ModalContext'
 export default function ModalProvider(props) {
   const [CO2E, setCO2E] = useState(false)
   const [installInstructions, setInstallInstructions] = useState(false)
+  const [perimetre, setPerimetre] = useState(false)
 
   return (
     <ModalContext.Provider
@@ -12,6 +13,8 @@ export default function ModalProvider(props) {
         setCO2E,
         installInstructions,
         setInstallInstructions,
+        perimetre,
+        setPerimetre,
       }}
     >
       {props.children}

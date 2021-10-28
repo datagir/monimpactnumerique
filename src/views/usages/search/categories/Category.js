@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import SearchContext from 'utils/SearchContext'
 import Emoji from 'components/base/Emoji'
 import Checkbox from './category/Checkbox'
+import Detail from './category/Detail'
 
 const Wrapper = styled.div`
   position: relative;
@@ -25,32 +26,33 @@ const Button = styled.button`
   border-radius: 2rem;
   background-color: ${(props) =>
     props.theme.colors[props.active ? 'main' : 'background']};
-  opacity: ${(props) => (props.disabled ? 0.3 : 1)};
-  cursor: ${(props) => (props.disabled ? 'normal' : 'pointer')};
-  transition: all 200ms ease-out;
+  cursor: pointer;
+  transition: color 200ms ease-out, background-color 200ms ease-out;
 
   ${(props) => props.theme.mq.small} {
     width: calc(33.3333vw - 1rem);
-    height: calc(33.3333vw - 1rem);
+    height: clamp(4rem, calc(33.3333vw - 1rem), 9rem);
+    border: 0.1875rem solid ${(props) => props.theme.colors.main};
+    border-radius: clamp(0.75rem, 6vw, 1.5rem);
   }
 `
 const StyledEmoji = styled(Emoji)`
   font-size: 2rem;
+
+  ${(props) => props.theme.mq.small} {
+    font-size: clamp(1rem, 6vw, 2rem);
+  }
 `
 const Label = styled.span`
   display: block;
   font-size: 1.25rem;
   text-align: center;
+
+  ${(props) => props.theme.mq.small} {
+    font-size: clamp(0.875rem, 4.4vw, 1.25rem);
+  }
 `
-const Detail = styled.div`
-  position: absolute;
-  top: calc(100% + 0.25rem);
-  left: 0;
-  right: 0;
-  font-size: 0.75rem;
-  font-weight: 300;
-  text-align: center;
-`
+
 export default function Category(props) {
   const { categories, setCategories } = useContext(SearchContext)
   const active = categories.includes(props.value)
@@ -75,7 +77,7 @@ export default function Category(props) {
         />
         <Checkbox active={active} />
       </Button>
-      <Detail>{props.detail}</Detail>
+      <Detail detail={props.detail} />
     </Wrapper>
   )
 }

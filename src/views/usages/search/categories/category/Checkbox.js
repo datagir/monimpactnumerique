@@ -14,17 +14,17 @@ const Wrapper = styled.div`
   border-radius: 0.875rem;
   transition: border 200ms ease-out, background-color 300ms ease-out;
 
-  ${(props) => props.theme.mq.medium} {
-    height: 1.5rem;
-    width: 1.5rem;
+  ${(props) => props.theme.mq.small} {
+    width: 5vw;
+    height: 5vw;
   }
 `
 const Check = styled.svg`
   width: auto;
   height: 1.2rem;
 
-  ${(props) => props.theme.mq.medium} {
-    height: 1rem;
+  ${(props) => props.theme.mq.small} {
+    height: 3vw;
   }
 
   path {

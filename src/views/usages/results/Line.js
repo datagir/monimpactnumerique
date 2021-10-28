@@ -10,9 +10,12 @@ const Wrapper = styled.div`
 `
 const Title = styled.div`
   position: relative;
-  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
   font-size: 1.25rem;
   font-weight: bold;
+  line-height: 1.1;
 
   i {
     font-weight: 300;
@@ -20,7 +23,12 @@ const Title = styled.div`
   }
 `
 const Label = styled.span`
+  margin-left: 0.5rem;
   font-size: 1.125rem;
+
+  ${(props) => props.theme.mq.small} {
+    font-size: 1rem;
+  }
 `
 export default function Line(props) {
   return (

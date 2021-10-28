@@ -79,7 +79,7 @@
   {
     "id": 8,
     "label": {
-      "fr": "Visioconférence <i>entre 2 emplacements</i>"
+      "fr": "Visioconférence <i>entre&nbsp;2&nbsp;emplacements</i>"
     },
     "category": "conference",
     "values": {
@@ -90,7 +90,7 @@
   {
     "id": 9,
     "label": {
-      "fr": "Visioconférence <i>entre 20 emplacements</i>"
+      "fr": "Visioconférence <i>entre&nbsp;20&nbsp;emplacements</i>"
     },
     "category": "conference",
     "values": {
@@ -101,7 +101,7 @@
   {
     "id": 10,
     "label": {
-      "fr": "Audioconférence <i>entre 2 emplacements</i>"
+      "fr": "Audioconférence <i>entre&nbsp;2&nbsp;emplacements</i>"
     },
     "category": "conference",
     "values": {
@@ -112,7 +112,7 @@
   {
     "id": 11,
     "label": {
-      "fr": "Audioconférence <i>entre 20 emplacements</i>"
+      "fr": "Audioconférence <i>entre&nbsp;20&nbsp;emplacements</i>"
     },
     "category": "conference",
     "values": {
