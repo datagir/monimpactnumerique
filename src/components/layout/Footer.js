@@ -65,7 +65,7 @@ export default function Footer(props) {
         <MobileButtons iframe={props.iframe} />
         <Section>
           {props.iframe && (
-            <Button to={process.env.GATSBY_URL}>
+            <Button to={process.env.REACT_APP_URL}>
               En savoir plus sur ce simulateur
             </Button>
           )}
